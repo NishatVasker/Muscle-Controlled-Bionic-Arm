@@ -8,7 +8,8 @@ This open-source project demonstrates a **bionic arm controlled via EMG (Electro
 
 The system uses **muscle signals** from a forearm to control **five servo motors** that replicate human hand motions in real-time.
 
-![Bionic_arm_media (7)](https://github.com/user-attachments/assets/79cd6af1-e3fd-4c05-9fbb-a577e14be852)
+![Bionic_arm_media (6)](https://github.com/user-attachments/assets/fffb97ac-4d90-4ff0-bb9f-9fddfe1fc90f)
+
 
 ---
 
@@ -74,12 +75,12 @@ Let `V_emg` be the EMG analog signal. The angle θ for servo is calculated as:
 ```cpp
 if (V_emg > threshold) {
   angle = map(V_emg, 250, 600, 0, 180);
-}
-else {
+} else {
   angle = 0;
 }
+```  <-- ✅ Add this line to close the code block
 
-## Pseudocode
+## 🧾 Pseudocode
 Start
 Initialize I2C and PCA9685
 Loop:
