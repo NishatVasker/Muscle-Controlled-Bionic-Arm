@@ -78,7 +78,7 @@ if (V_emg > threshold) {
 } else {
   angle = 0;
 }
-```  <-- ✅ Add this line to close the code block
+```  
 
 ## 🧾 Pseudocode
 Start
