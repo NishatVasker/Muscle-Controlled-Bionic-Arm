@@ -47,20 +47,78 @@ The system uses **muscle signals** from a forearm to control **five servo motors
 
 ---
 
-## ⚡ Circuit Connections
+## 🔌 Full Wiring Connections
 
-### Servo Motor Setup:
-- MG996R servos connected to PCA9685 channels 0–4.
-- PCA9685 to Arduino:
-  - SDA → A4  
-  - SCL → A5
+This section details all the electrical connections between the microcontroller, sensor, servo motors, servo driver, and batteries. It assumes you're using an **Arduino Uno**, **5 MG996R servos**, **a PCA9685 servo driver**, and a **generic EMG muscle sensor** powered by two 9V batteries.
 
-### EMG Sensor:
-- Vcc → 9V battery (+)  
-- GND → Battery (–) and Arduino GND  
-- Signal → Arduino A0
+---
 
-> Important: All grounds (PCA9685, Arduino, EMG) must be connected together.
+### 🧠 EMG Sensor → Arduino Uno
+
+| EMG Sensor Pin | Connects To                |
+|----------------|----------------------------|
+| VCC            | +9V Battery 1              |
+| GND            | GND of Battery 1 and Arduino GND |
+| SIG (OUT)      | Arduino A0 (Analog Input)  |
+
+> 🔋 Power the EMG sensor using **two 9V batteries in series** for ±9V operation (as many analog EMG modules require). Ensure the Arduino shares a **common ground** with the battery.
+
+---
+
+### 🔧 PCA9685 Servo Driver → Arduino Uno (I2C)
+
+| PCA9685 Pin | Arduino Uno Pin |
+|-------------|------------------|
+| VCC         | 5V               |
+| GND         | GND              |
+| SDA         | A4               |
+| SCL         | A5               |
+
+> 🧠 This sets up I2C communication for servo control.
+
+---
+
+### ⚙️ Servo Motors (MG996R) → PCA9685 Channels 0–4
+
+| Servo         | PCA9685 Channel | Signal Pin | VCC (Red) | GND (Brown) |
+|---------------|------------------|------------|-----------|-------------|
+| Thumb Servo   | 0                | CH0        | 5V Power  | Common GND  |
+| Index Servo   | 1                | CH1        | 5V Power  | Common GND  |
+| Middle Servo  | 2                | CH2        | 5V Power  | Common GND  |
+| Ring Servo    | 3                | CH3        | 5V Power  | Common GND  |
+| Wrist Servo   | 4                | CH4        | 5V Power  | Common GND  |
+
+> ⚠️ Do **not power servos from Arduino 5V pin**. Use a **separate 5V–6V external power source** (e.g., 2-cell Li-ion battery or 5V/3A adapter) to VCC of PCA9685 servo rail.
+
+---
+
+### 🔋 Power Supply Summary
+
+| Device           | Power Source           | Notes                                 |
+|------------------|------------------------|----------------------------------------|
+| Arduino Uno      | USB or 9V adapter      | Can be USB-powered during testing     |
+| PCA9685 (logic)  | Arduino 5V             | Connected via VCC pin                 |
+| Servo Motors     | External 5–6V (2–5A)   | Do not use Arduino 5V for servos      |
+| EMG Sensor       | Two 9V batteries (±9V) | Sensor output to Arduino A0           |
+
+---
+
+### 🧷 Common Ground Wiring (Very Important!)
+
+You **must connect all GNDs together**:
+- Arduino GND
+- PCA9685 GND
+- EMG sensor GND
+- Servo motor power GND
+- 9V battery GND (used in EMG)
+
+This ensures stable reference voltage for analog signal reading and PWM control.
+
+---
+
+### 🖼️ Suggested Diagram (Optional)
+
+
 
 ---
 
