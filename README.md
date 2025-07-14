@@ -112,11 +112,13 @@ You **must connect all GNDs together**:
 - Servo motor power GND
 - 9V battery GND (used in EMG)
 
-This ensures stable reference voltage for analog signal reading and PWM control.
+This ensures a stable reference voltage for analog signal reading and PWM control.
 
 ---
 
 ### 🖼️ Suggested Diagram (Optional)
+
+<img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/7eb4ad94-d569-4683-bbcb-36cece2bb93b" />
 
 
 
