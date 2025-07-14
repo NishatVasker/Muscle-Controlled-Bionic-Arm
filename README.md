@@ -116,9 +116,10 @@ This ensures a stable reference voltage for analog signal reading and PWM contro
 
 ---
 
-### 🖼️ Suggested Diagram (Optional)
+### 🖼️ Suggested Diagram (Optional, generated with GPT from microcontroller code)
 
-<img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/7eb4ad94-d569-4683-bbcb-36cece2bb93b" />
+<img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/7eb4ad94-d569-4683-bbcb-36cece2bb93b" /> <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/5ace4c22-c9a6-4236-befa-b312f25396b5" />
+
 
 
 
