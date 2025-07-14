@@ -8,6 +8,8 @@ This open-source project demonstrates a **bionic arm controlled via EMG (Electro
 
 The system uses **muscle signals** from a forearm to control **five servo motors** that replicate human hand motions in real-time.
 
+![Bionic_arm_media (7)](https://github.com/user-attachments/assets/79cd6af1-e3fd-4c05-9fbb-a577e14be852)
+
 ---
 
 ## 🎯 Features
@@ -88,3 +90,15 @@ Loop:
     Else:
         Set servos to 0°
 Repeat
+
+## 📹 Video
+
+🎥 Watch the Bionic Arm in Action:  
+➡️ [https://www.youtube.com/shorts/qkh9qTzFNlg](https://www.youtube.com/shorts/qkh9qTzFNlg)
+![Bionic_arm_media (11)](https://github.com/user-attachments/assets/69b29c00-ee17-4663-92bd-fad5245137a8)
+![Bionic_arm_media (9)](https://github.com/user-attachments/assets/e489ce76-42c8-4b75-8b1c-19d84c7aaf33)
+![Bionic_arm_media (5)](https://github.com/user-attachments/assets/83293f5a-e0a6-4b92-8586-d581f3e37d39)
+
+
+
+
